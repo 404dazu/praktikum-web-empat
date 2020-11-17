@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message</title>
+</head>
+<body>
+    <fieldset>
+    <legend>ChatBox</legend>
+        <div class="container-chat" id="container-chat">
+        </div></fieldset>
+        <div class="input-chat">
+            <input type="text" id="input-masukan-chat" value=""/><button onclick=kirim() id="kirim">kirim</button>
+    <script>
+        function kirim(){
+            var para = document.createElement("P");
+            var newChat = document.getElementById("input-masukan-chat").value;
+            console.log(newChat);
+            para.append(newChat);
+            document.getElementById("container-chat").append(para);
+        }
+    </script>
+</body>
+</html>

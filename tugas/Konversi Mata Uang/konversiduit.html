@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Mata Uang</title>
+    <script>
+        function ganti_kurs(){
+            let inputNilai = document.getElementById("nilai").value;
+            let valas = document.getElementById("valas").value;
+            let hasilNilai;
+            if(valas == "dollarus"){
+                document.getElementById("hasil").value="Rp. "+parseFloat(inputNilai)*9915;
+                hasilNilai=document.getElementById("hasil").value;
+                console.log(hasilNilai);
+            }
+            else if(valas == "dollarsg"){
+                document.getElementById("hasil").value="Rp. "+parseFloat(inputNilai)*13472;
+                hasilNilai=document.getElementById("hasil").value;
+                console.log(hasilNilai);
+            }
+            else if(valas == "ringgit"){
+                document.getElementById("hasil").value="Rp. "+parseFloat(inputNilai)*874;
+                hasilNilai=document.getElementById("hasil").value;
+                console.log(hasilNilai);
+            }
+            else if(valas == "yen"){
+                document.getElementById("hasil").value="Rp. "+parseFloat(inputNilai)*120;
+                hasilNilai=document.getElementById("hasil").value;
+                console.log(hasilNilai);
+            }
+            else if(valas == "euro"){
+                document.getElementById("hasil").value="Rp. "+parseFloat(inputNilai)*15888;
+                hasilNilai=document.getElementById("hasil").value;
+                console.log(hasilNilai);
+            }
+            else if(valas == "real"){
+                document.getElementById("hasil").value="Rp. "+parseFloat(inputNilai)*3592;
+                hasilNilai=document.getElementById("hasil").value;
+                console.log(hasilNilai);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Mata uang asing - Rupiah</legend>
+            <table>
+            <tr>
+                <th>Masukkan Nilai</th>
+                <th>Valas</th>
+                <th>Nilai Rupiah</th>
+            </tr>
+            <br>
+            <tr>
+                <td><input id="nilai" placeholder="Masukkan uang Anda" type="text"></td>
+                <td><select id="valas" onclick="ganti_kurs()" id="kurs">
+                    <option value="dollarus">Dollar US</option>
+                    <option value="dollarsg">Dollar Singapore</option>
+                    <option value="ringgit">Ringgit Malaysia</option>
+                    <option value="Yen">Yen Japan</option>
+                    <option value="euro">Euro</option>
+                    <option value="real">Riyal Arab Saudi</option>
+                </select></td>
+                <td><input id="hasil" readonly value="0" type="text"></td>
+            </tr>
+        </table>
+        </fieldset>
+    </form>
+</body>
+</html>

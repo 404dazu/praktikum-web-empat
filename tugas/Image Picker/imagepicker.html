@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <style>
+        select, img {
+            width: 250px;
+            height: auto;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+
+<body>
+<h2>Hewan Langka</h2>
+    <select id="changeImage" onchange="change_image()">
+        <option disabled selected>Hewan - Hewan Langka</option>
+        <option value="komodo" >Komodo</option>
+        <option value="elangflores">Elang Flores</option>
+        <option value="gelada">Gelada</option>
+        <option value="uburemas">Ubur - Ubur Emas</option>
+        <option value="kangurupohon">Kanguru Pohon</option>
+        <option value="burungbidadari">Burung Bidadari</option>
+    </select>
+    <br/>
+    <br/>
+    <img id="gambar" src="" alt="Pilih Hewan diatas untuk menampilkan gambar!" width="100px" height="auto">
+    <script>
+        function change_image() {
+            let images = document.getElementById("changeImage").value;
+            let gambar = document.getElementById("gambar");
+            if (images == "komodo"){
+                gambar.src="./image/web1.jpeg";
+                alert(`Ini adalah foto Komodo ${images}`);
+            }else if (images == "elangflores"){
+                gambar.src="./image/web2.jpeg";
+                alert(`Ini adalah foto Elang Flores ${images}`);
+            }else if (images == "gelada"){
+                gambar.src="./image/web3.jpeg";
+                alert(`Ini adalah foto Gelada ${images}`);
+            }else if (images == "uburemas"){
+                gambar.src="./image/web4.jpeg";
+                alert(`Ini adalah foto Ubur - Ubur Emas ${images}`);
+            }else if (images == "kangurupohon"){
+                gambar.src="./image/web5.jpeg";
+                alert(`Ini adalah foto Kangguru Pohon ${images}`);
+            }else if (images == "burungbidadari"){
+                gambar.src="./image/web6.jpeg";
+                alert(`Ini adalah foto Burung Bidadari ${images}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
